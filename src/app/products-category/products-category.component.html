@@ -1,0 +1,24 @@
+<div class="category-info">
+  <div class="category-description">
+    <h2>Category: {{ category?.title }}</h2>
+    <p>{{ category?.description }}</p>
+  </div>
+  <img [src]="category?.image" alt="{{ category?.title }}">
+  <button (click)="viewProducts()" class="view-products-button">Voir produits 2</button>
+  <a [routerLink]="['details']" queryParamsHandling="preserve" class="details-button">Voir détails</a>
+</div>
+
+<div class="product-list">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+    <div class="product-details">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">{{ product.price }} TND</p>
+      <p class="product-brand">{{ product.brand }}</p>
+      <span *ngIf="product.promotion > 0" class="promotion">Promotion: {{ product.promotion }}%</span>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

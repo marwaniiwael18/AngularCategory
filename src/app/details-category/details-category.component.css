@@ -1,0 +1,12 @@
+/* details-category.component.css */
+
+.details-category {
+  margin-top: 20px;
+}
+
+.details-category img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}

@@ -1,0 +1,5 @@
+<div *ngIf="category" class="details-category">
+  <h2>{{ category.title }}</h2>
+  <p>{{ category.description }}</p>
+  <img [src]="category.image" alt="{{ category.title }}">
+</div>
